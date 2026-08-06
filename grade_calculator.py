@@ -1,10 +1,11 @@
 name= input("Enter the student's name: ")
 
-grade1= float(input("Enter the first grade: "))
-grade2= float(input("Enter the second grade: "))
-grade3= float(input("Enter the third grade: "))
+grades = []
+for i in range(3):
+    grade= float(input(f"Enter grade {i+1}: "))
+    grades.append(grade)
 
-average= (grade1 + grade2 + grade3) / 3
+average= sum(grades)/len(grades)
 
 if average >=90:
     letter_grade= "A"
